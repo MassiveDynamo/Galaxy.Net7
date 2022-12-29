@@ -1,7 +1,7 @@
-# Galaxy.Net7 Import EDSM © data dumps from Elite Dangerous™
+# Galaxy.Net7: Import EDSM © data dumps
 
 EDSM - Elite Dangerous Star Map © is a great website that exports 
-nightly dumps for some of the galaxy.
+nightly dumps for some of the galaxy in Elite Dangerous™.
 
 The nightly dumps will let you import the data into your own datastore 
 and then do whatever. 
