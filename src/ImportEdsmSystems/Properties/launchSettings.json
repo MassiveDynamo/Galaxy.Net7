@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ImportEdsmSystems": {
+      "commandName": "Project",
+      "commandLineArgs": "-SystemsZipfile \"D:\\data\\EDSM-Dumps\\systemsWithCoordinates.json.gz\" -ExpandSystemName \"D:\\data\\EDSM-Dumps\\systemsWithCoordinates.json.chunk1.json\" -InitialCatalog eddb1"
+    }
+  }
+}
