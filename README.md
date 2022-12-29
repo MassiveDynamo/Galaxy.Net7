@@ -1,4 +1,4 @@
-# Galaxy.Net7 Import EDSM data dumps in SQL Server Express databases
+# Galaxy.Net7 Import EDSM data dumps
 
 ## Getting started
 
@@ -16,7 +16,7 @@ A LocalDB database can max be 10Gb, hence we need more than one database to stor
 for each new database eddb1 - eddb4
 
 ## Build the Galaxy.Net7 solution
-- Open the solution Galaxy.Net7 in VS 2022 and create a release build
+- Open the solution [Galaxy.Net7.sln](src\Galaxy.Net7.sln) in VS 2022 and create a release build
 - Import the scripts using this line:
 	`& "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\SqlPackage.exe" 
 	/Sourcefile:.\Galaxy.Net7\src\eddb\bin\Release\eddb.dacpac /TargetDatabaseName:eddb1 
