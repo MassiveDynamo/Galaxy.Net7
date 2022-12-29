@@ -4,7 +4,9 @@
 nightly dumps for some of the galaxy in [Elite Dangerous™](https://www.elitedangerous.com/).
 
 The nightly dumps will let you import the data into your own datastore 
-and then do whatever. 
+and then do whatever.
+
+This project is such an example using C# NET 7 and SQL Server 2022 Express
 
 ## Getting started
 
