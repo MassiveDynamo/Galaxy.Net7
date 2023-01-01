@@ -7,17 +7,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImportEdsmSystems", "Import
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "eddb", "eddb\eddb.sqlproj", "{2264E43E-F4DA-42EB-9234-7505DC58D238}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Split-Systems", "Split-Systems\Split-Systems.csproj", "{5EFDDF2D-AFD7-46FE-BDDF-CC7D2F71AE91}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6B5DB5B7-FB12-4351-BCAA-DE05242BAB6B}"
 	ProjectSection(SolutionItems) = preProject
+		eddb.runsettings = eddb.runsettings
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDGalaxy", "EDGalaxy\EDGalaxy.csproj", "{2693270E-77B1-4B02-B588-AC9568831676}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EDGalaxy", "EDGalaxy\EDGalaxy.csproj", "{2693270E-77B1-4B02-B588-AC9568831676}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDGalaxyTests", "EDGalaxyTests\EDGalaxyTests.csproj", "{59E641E9-F5F0-4362-8644-B6B8A061BAFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EDGalaxyTests", "EDGalaxyTests\EDGalaxyTests.csproj", "{59E641E9-F5F0-4362-8644-B6B8A061BAFE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SplitSystems", "SplitSystems\SplitSystems.csproj", "{5E16CF8A-48A5-49E4-967A-F516FB106908}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +36,6 @@ Global
 		{2264E43E-F4DA-42EB-9234-7505DC58D238}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2264E43E-F4DA-42EB-9234-7505DC58D238}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2264E43E-F4DA-42EB-9234-7505DC58D238}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{5EFDDF2D-AFD7-46FE-BDDF-CC7D2F71AE91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5EFDDF2D-AFD7-46FE-BDDF-CC7D2F71AE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5EFDDF2D-AFD7-46FE-BDDF-CC7D2F71AE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5EFDDF2D-AFD7-46FE-BDDF-CC7D2F71AE91}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2693270E-77B1-4B02-B588-AC9568831676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2693270E-77B1-4B02-B588-AC9568831676}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2693270E-77B1-4B02-B588-AC9568831676}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,6 +44,10 @@ Global
 		{59E641E9-F5F0-4362-8644-B6B8A061BAFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59E641E9-F5F0-4362-8644-B6B8A061BAFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59E641E9-F5F0-4362-8644-B6B8A061BAFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E16CF8A-48A5-49E4-967A-F516FB106908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E16CF8A-48A5-49E4-967A-F516FB106908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E16CF8A-48A5-49E4-967A-F516FB106908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E16CF8A-48A5-49E4-967A-F516FB106908}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
