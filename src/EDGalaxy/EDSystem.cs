@@ -10,11 +10,11 @@ public class EDSystem
     public readonly long? Id64;
     public readonly string Name;
     public readonly DateTime Date;
-    public readonly float X;
-    public readonly float Y;
-    public readonly float Z;
+    public readonly double X;
+    public readonly double Y;
+    public readonly double Z;
 
-    public EDSystem(int Id, long? Id64, string Name, float X, float Y, float Z, DateTime Date)
+    public EDSystem(int Id, long? Id64, string Name, double X, double Y, double Z, DateTime Date)
     {
         this.Id = Id;
         this.Id64 = Id64;

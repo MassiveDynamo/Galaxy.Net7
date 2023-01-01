@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace EDGalaxy
@@ -7,6 +8,44 @@ namespace EDGalaxy
     {
         const string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=eddb1;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
+        public static EDSystem? GetSystem(string systemName)
+        {
+            if (systemName is null)
+            {
+                throw new ArgumentNullException(nameof(systemName));
+            }
+
+            DataTable table = new();
+            using SqlConnection connection = new(connectionString);
+            using SqlCommand cmd = new("dbo.prcGetSystem", connection);
+            using SqlDataAdapter da = new(cmd);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@SystemName", systemName);
+            try
+            {
+                connection.Open();
+                da.Fill(table);
+                if( table.Rows.Count == 0 ) 
+                {
+                    return null;
+                }
+                
+                DataRow dr = table.Rows[0];
+                int id = (int)dr[0];
+                long id64 = (long)dr[1];
+                string name = (string)dr[2];
+                double x = (double)dr[3];
+                double y = (double)dr[4];
+                double z = (double)dr[5];
+                DateTime dt = (DateTime)dr[6];
+                return new EDSystem(id, id64, name, x, y, z, dt);
+            }
+            catch (Exception)
+            {
+                return null; // return new EDSystem((int)table.NewRow[0], )
+            }
+        }
+
         public static EDSystemDistance[] GetCubeSystems(string systemName, int size)
         {
             if (systemName is null)
@@ -14,7 +53,7 @@ namespace EDGalaxy
                 throw new ArgumentNullException(nameof(systemName));
             }
 
-            List<EDSystem> list = new List<EDSystem>();
+            List<EDSystem> list = new();
             List<EDSystemDistance> cubeSystems = new();
             using SqlConnection connection = new(connectionString);
             using SqlCommand cmd = new("dbo.prcGetCubeSystems", connection);
@@ -31,7 +70,7 @@ namespace EDGalaxy
                 double x = (double)reader[3];
                 double y = (double)reader[4];
                 double z = (double)reader[5];
-                list.Add(new EDSystem((int)reader[0], (long)reader[1], (string)reader[2], (float)x, (float)y, (float)z, (DateTime)reader[6]));
+                list.Add(new EDSystem((int)reader[0], (long)reader[1], (string)reader[2], x, y, z, (DateTime)reader[6]));
             }
 
             // Close the reader so we can get the return value            
@@ -45,7 +84,7 @@ namespace EDGalaxy
                 double deltay = item.Y - source.Y;
                 double deltaz = item.Z - source.Z;
 
-                double distance = (double)Math.Sqrt((deltax * deltax) + (deltay * deltay) + (deltaz * deltaz));
+                double distance = Math.Sqrt((deltax * deltax) + (deltay * deltay) + (deltaz * deltaz));
                 cubeSystems.Add(new EDSystemDistance(item, distance));
             }
 

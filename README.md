@@ -48,11 +48,3 @@ for each new database eddb1 - eddb4
 
 ## You're done :-)
 - Examine the methods in [.\Galaxy.Net7\src\EDGalaxy\Eddb.cs](src/EDGalaxy/Eddb.cs) to view the current functionality
-
-
-
-
-
-
-
-

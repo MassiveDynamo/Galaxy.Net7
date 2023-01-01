@@ -6,6 +6,13 @@ namespace EDGalaxy.Tests
     public class EddbTests
     {
         [TestMethod()]
+        public void GetSystem()
+        {
+            Assert.IsNotNull(Eddb.GetSystem("Sol"));
+            Assert.IsNull(Eddb.GetSystem("SolNotFound"));
+        }
+
+        [TestMethod()]
         public void GetCubeSystemsTest()
         {
             // Invoke-RestMethod -Uri "https://www.edsm.net/api-v1/cube-systems?systemName=Sol&size=10"
