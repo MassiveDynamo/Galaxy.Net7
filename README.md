@@ -11,8 +11,8 @@ This project is such an example using C# NET 7 and SQL Server 2022 Express
 ## Getting started
 
 ### Prerequisites
-- Download Visual Studio 2022 Community from https://visualstudio.microsoft.com/downloads/
-- Install .NET desktop delevopment
+- Download Visual Studio 2022 Community from https://visualstudio.microsoft.com/downloads/. Use Professional or Enterprise if you have one.
+- Install .NET desktop development
 - Install Data storage and processing
 
 - Download SQL Server Express from https://www.microsoft.com/en-us/sql-server/sql-server-downloads
