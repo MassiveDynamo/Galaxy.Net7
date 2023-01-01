@@ -37,7 +37,7 @@ for each new database eddb1 - eddb4
 ## Importing the EDSM Nightly dump
 - Download https://www.edsm.net/dump/systemsWithCoordinates.json.gz
 - Unzip it
-- Split the json into four json files using .\Galaxy.Net7\src\Split-Systems. Change fileName accordingly
+- Split the json into four json files using .\Galaxy.Net7\src\SplitSystems. Change fileName accordingly
 - Import each json file using:
 	`.\ImportEdsmSystems.exe -SystemsZipfile "D:\data\EDSM-Dumps\systemsWithCoordinates.json.gz" -ExpandSystemName "D:\data\EDSM-Dumps\systemsWithCoordinates.json.chunk2.json" -InitialCatalog eddb1`
 - Remember to change InitialCatalog accordingly
